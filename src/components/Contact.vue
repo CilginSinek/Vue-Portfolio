@@ -14,8 +14,7 @@ onMounted(async () => {
         const response = await fetch("/api/contact", {
             method: "GET",
             mode: "same-origin",
-            credentials: "same-origin",
-            body: "contact",
+            credentials: "same-origin"
         });
         const res = await response.json();
         contactArr.value = JSON.parse(res);

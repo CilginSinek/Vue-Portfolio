@@ -7,8 +7,7 @@ onMounted(async () => {
     await fetch(`/api`,{
         method:"GET",
         mode:"same-origin",
-        credentials: "same-origin",
-        body:"about",
+        credentials: "same-origin"
     }).then(response => response.json()).then(res => {
         about.value = res
     }).catch(err => about.value = err.message)
