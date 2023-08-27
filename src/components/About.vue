@@ -4,7 +4,7 @@ import VueMarkdown from 'markdown-vue';
 
 const about = ref<string>("");
 onMounted(async () => {
-    await fetch(`/api`,{
+    await fetch(`/api/about`,{
         method:"GET",
         mode:"same-origin",
         credentials: "same-origin"

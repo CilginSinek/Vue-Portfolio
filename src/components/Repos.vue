@@ -6,7 +6,7 @@ import Repo from './Repo.vue'
 const repos = ref<PinnedRepos[]>([])
 onMounted(async () => {
     try {
-        await fetch("/api", {
+        await fetch("/api/repos", {
             method: "GET",
             mode: "same-origin",
             credentials: "same-origin"

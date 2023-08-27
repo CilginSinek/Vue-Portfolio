@@ -4,21 +4,23 @@ import { get } from "@vercel/edge-config";
 
 export const config = { matcher: "/api/:path*", runtime: "edge" };
 
+const baseUrl = "https://vue-portfolio-taupe.vercel.app"
+
 export default function handler(request: Request, context: RequestContext) {
   if (request.method === "GET") {
     //* Repos page
-    if (request.url === "/repos") {
+    if (request.url === baseUrl+"/api/repos") {
       const Repos = context.waitUntil(GetRepos());
       return new Response(JSON.stringify(Repos));
     } 
     //* About Page
-    else if (request.url === "/about") {
+    else if (request.url === baseUrl+"/api/about") {
       const { country } = geolocation(request);
       const about = context.waitUntil(getAbout(country || ""));
       return new Response(JSON.stringify(about));
     } 
     //* Contact Page
-    else if (request.url === "/api/contact") {
+    else if (request.url === baseUrl+"/api/contact") {
       const contacts = context.waitUntil(getContacts());
       return new Response(JSON.stringify(contacts));
     } 
