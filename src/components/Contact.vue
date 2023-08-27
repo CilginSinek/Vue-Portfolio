@@ -17,7 +17,7 @@ onMounted(async () => {
             credentials: "same-origin"
         });
         const res = await response.json();
-        contactArr.value = JSON.parse(res);
+        contactArr.value = res;
     } catch (err) {
         console.log(err)
     }
