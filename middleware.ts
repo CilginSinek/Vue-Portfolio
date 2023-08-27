@@ -12,7 +12,6 @@ export default async function handler(request: Request, context: RequestContext)
     if (request.url === baseUrl+"/api/repos") {
       const Repos = await GetRepos();
       return new Response(JSON.stringify(Repos));
-
     } 
     //* About Page
     else if (request.url === baseUrl+"/api/about") {
@@ -36,7 +35,7 @@ const GetRepos = async (): Promise<Object[]> => {
   const res = await fetch(
     "https://gh-pinned-repos.egoist.dev/?username=CilginSinek"
   ).then((response) => response.json());
-  return res.text;
+  return res;
 };
 //* get contact data fuc
 const getContacts = async (): Promise<Object> => {
