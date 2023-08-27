@@ -11,7 +11,12 @@ const contactArr = ref<ContactObj[]>([]);
 
 onMounted(async () => {
     try {
-        const response = await fetch("/api");
+        const response = await fetch("/api/contact", {
+            method: "GET",
+            mode: "same-origin",
+            credentials: "same-origin",
+            body: "contact",
+        });
         const res = await response.json();
         contactArr.value = JSON.parse(res);
     } catch (err) {
@@ -25,7 +30,7 @@ onMounted(async () => {
     <div class="card">
         <div class="ContentCard" v-for="content in contactArr">
             <a :href="content.url">
-                <image :src="'../Icons/'+ content.name" :alt="content.name" />
+                <image :src="'../Icons/' + content.name" :alt="content.name" />
             </a>
             <p>{{ content.nick }}</p>
         </div>

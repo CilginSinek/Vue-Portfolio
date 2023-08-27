@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {PinnedRepos} from './api'
+import {PinnedRepos} from './repoType.ts'
 const props = defineProps<PinnedRepos>()
 </script>
 
@@ -15,4 +15,4 @@ const props = defineProps<PinnedRepos>()
             </div>
         </div>
     </div>
-</template>
+</template>./repoType

@@ -2,23 +2,23 @@ import type { RequestContext } from "@vercel/edge";
 import { geolocation } from "@vercel/edge";
 import { get } from "@vercel/edge-config";
 
-export const config = { matcher: "/api", runtime: "edge" };
+export const config = { matcher: "/api/:path*", runtime: "edge" };
 
 export default function handler(request: Request, context: RequestContext) {
   if (request.method === "GET") {
     //* Repos page
-    if (request.url === "/Repos") {
+    if (request.url === "/repos") {
       const Repos = context.waitUntil(GetRepos());
       return new Response(JSON.stringify(Repos));
     } 
     //* About Page
-    else if (request.url === "/About") {
+    else if (request.url === "/about") {
       const { country } = geolocation(request);
       const about = context.waitUntil(getAbout(country || ""));
       return new Response(JSON.stringify(about));
     } 
     //* Contact Page
-    else if (request.url === "/Contact") {
+    else if (request.url === "/api/contact") {
       const contacts = context.waitUntil(getContacts());
       return new Response(JSON.stringify(contacts));
     } 

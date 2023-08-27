@@ -1,5 +1,3 @@
-const name ="CilginSinek"
-const RepoLink = "PortfolioText" // this link = api.github/repos/contects/{RepoLink}/
 interface PinnedRepos {
     owner:string,
     repo:string,
@@ -10,5 +8,4 @@ interface PinnedRepos {
     stars:string,
     forks:string
 }
-export { name, RepoLink }
 export type { PinnedRepos }
