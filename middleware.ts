@@ -6,22 +6,23 @@ export const config = { matcher: "/api/:path*", runtime: "edge" };
 
 const baseUrl = "https://vue-portfolio-taupe.vercel.app"
 
-export default function handler(request: Request, context: RequestContext) {
+export default async function handler(request: Request, context: RequestContext) {
   if (request.method === "GET") {
     //* Repos page
     if (request.url === baseUrl+"/api/repos") {
-      const Repos = context.waitUntil(GetRepos());
+      const Repos = GetRepos();
       return new Response(JSON.stringify(Repos));
+
     } 
     //* About Page
     else if (request.url === baseUrl+"/api/about") {
       const { country } = geolocation(request);
-      const about = context.waitUntil(getAbout(country || ""));
+      const about = await getAbout(country || "")
       return new Response(JSON.stringify(about));
     } 
     //* Contact Page
     else if (request.url === baseUrl+"/api/contact") {
-      const contacts = context.waitUntil(getContacts());
+      const contacts = await getContacts();
       return new Response(JSON.stringify(contacts));
     } 
     //* Any page
@@ -35,7 +36,7 @@ const GetRepos = async (): Promise<Object[]> => {
   const res = await fetch(
     "https://gh-pinned-repos.egoist.dev/?username=CilginSinek"
   ).then((response) => response.json());
-  return res;
+  return res.text;
 };
 //* get contact data fuc
 const getContacts = async (): Promise<Object> => {
