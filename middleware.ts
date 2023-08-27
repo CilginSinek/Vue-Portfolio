@@ -10,7 +10,7 @@ export default async function handler(request: Request, context: RequestContext)
   if (request.method === "GET") {
     //* Repos page
     if (request.url === baseUrl+"/api/repos") {
-      const Repos = GetRepos();
+      const Repos = await GetRepos();
       return new Response(JSON.stringify(Repos));
 
     } 
