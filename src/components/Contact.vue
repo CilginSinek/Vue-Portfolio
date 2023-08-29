@@ -29,7 +29,7 @@ onMounted(async () => {
     <div class="card">
         <div class="contactCard" v-for="contact in contactArr">
             <a :href="contact.url">
-                <image class="contactImage" :src="'../Icons/' + contact.name + '.png'" :alt="contact.name" />
+                <img class="contactImage" :src="'../assets/Icons/' + contact.name + '.png'" :alt="contact.name" />
             </a>
             <p>{{ contact.nick }}</p>
         </div>
