@@ -3,11 +3,16 @@
 
 <template>
   <nav>
-    <router-link to="/">Home</router-link>
-    <router-link to="/About">About</router-link>
-    <router-link to="/Repos">Repos</router-link>
-    <router-link to="/Contact">Contact</router-link>
+    <div class="navbarLinks" >
+      <router-link class="navlink" to="/">Home</router-link>
+      <router-link class="navlink" to="/About">About</router-link>
+      <router-link class="navlink" to="/Repos">Repos</router-link>
+      <router-link class="navlink" to="/Contact">Contact</router-link>
+    </div>
   </nav>
-  <router-view></router-view>
+  <div class="container">
+    <router-view></router-view>
+  </div>
+
 </template>
 

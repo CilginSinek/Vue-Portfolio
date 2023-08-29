@@ -27,11 +27,11 @@ onMounted(async () => {
 
 <template>
     <div class="card">
-        <div class="ContentCard" v-for="content in contactArr">
-            <a :href="content.url">
-                <image :src="'../Icons/' + content.name" :alt="content.name" />
+        <div class="contactCard" v-for="contact in contactArr">
+            <a :href="contact.url">
+                <image class="contactImage" :src="'../Icons/' + contact.name + '.png'" :alt="contact.name" />
             </a>
-            <p>{{ content.nick }}</p>
+            <p>{{ contact.nick }}</p>
         </div>
     </div>
 </template>

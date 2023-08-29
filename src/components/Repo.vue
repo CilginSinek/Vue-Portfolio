@@ -4,15 +4,13 @@ const props = defineProps<PinnedRepos>()
 </script>
 
 <template>
-    <div class="Repo">
+    <div class="repo">
         <div>
-            <h4><a :href="props.link">{{props.repo}}</a></h4>
+            <a class="repoLink" :href="props.link">{{props.repo}}</a>
         </div>
-        <div>
-            <div>
-                <p>{{ props.languageColor }}</p>
-                <p>{{ props.language }}</p>
-            </div>
+        <div class="repoFooter" >
+            <div class="repoColor" :style="{ 'background-color':props.languageColor }"></div>
+            <p>{{ props.language }}</p>
         </div>
     </div>
-</template>./repoType
+</template>
