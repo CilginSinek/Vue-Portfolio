@@ -23,35 +23,7 @@ export default async function handler(request: Request, context: RequestContext)
     else if (request.url === baseUrl+"/api/contact") {
       const contacts = await getContacts();
       return new Response(JSON.stringify(contacts));
-    }else if(request.url ===baseUrl+"/api/discord.png"){
-      const imageData = await fetch(new URL('./Icons/discord.png', import.meta.url)).then(
-          (res) => res.arrayBuffer(),
-      );
-      new ImageResponse((
-          <image width="96px" height="96px" src={imageData}/>
-      ))
-    }else if(request.url === baseUrl +"/api/github.png"){
-      const imageData = await fetch(new URL('./Icons/github.png', import.meta.url)).then(
-          (res) => res.arrayBuffer(),
-      );
-      new ImageResponse((
-          <image width="96px" height="96px" src={imageData}/>
-      ))
-    }else if(request.url === baseUrl +"/api/linkedin.png"){
-      const imageData = await fetch(new URL('./Icons/linkedin.png', import.meta.url)).then(
-          (res) => res.arrayBuffer(),
-      );
-      new ImageResponse((
-          <image width="96px" height="96px" src={imageData}/>
-      ))
-    }else if(request.url === baseUrl +"/api/twitter.png"){
-      const imageData = await fetch(new URL('./Icons/twitter.png', import.meta.url)).then(
-          (res) => res.arrayBuffer(),
-      );
-      new ImageResponse((
-          <image width="96px" height="96px" src={imageData}/>
-      ))
-    }
+    } 
     //* Any page
     else {
       return new Response(`Hello, from ${request.url} I'm an Edge Function!`);
