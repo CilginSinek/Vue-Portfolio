@@ -5,6 +5,7 @@ interface ContactObj {
     name: string,
     url: string,
     nick: string,
+    imageUrl: string,
 };
 
 const contactArr = ref<ContactObj[]>([]);
@@ -29,7 +30,7 @@ onMounted(async () => {
     <div class="card">
         <div class="contactCard" v-for="contact in contactArr">
             <a :href="contact.url">
-                <img class="contactImage" :src="'../assets/Icons/' + contact.name + '.png'" :alt="contact.name" />
+                <img class="contactImage" :src="contact.imageUrl" :alt="contact.name" />
             </a>
             <p>{{ contact.nick }}</p>
         </div>
