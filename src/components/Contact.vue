@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue';
 
 interface ContactObj {
     name: string,
-    url: string,
+    link: string,
     nick: string,
     imageUrl: string,
 };
@@ -28,11 +28,13 @@ onMounted(async () => {
 
 <template>
     <div class="card">
-        <div class="contactCard" v-for="contact in contactArr">
-            <a :href="contact.url">
-                <img class="contactImage" :src="contact.imageUrl" :alt="contact.name" />
-            </a>
-            <p>{{ contact.nick }}</p>
+        <div class="contactDiv">
+            <div class="contactCard" v-for="contact in contactArr">
+                <a :href="contact.link">
+                    <img class="contactImage" :src="contact.imageUrl" :alt="contact.name" />
+                </a>
+                <p>{{ contact.nick }}</p>
+            </div>
         </div>
     </div>
 </template>
