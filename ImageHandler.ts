@@ -1,4 +1,5 @@
 import { ImageResponse } from '@vercel/og';
+import type { RequestContext } from "@vercel/edge";
 
 export const config = {
     matcher: "/Icons/:path*",
@@ -6,7 +7,7 @@ export const config = {
 };
 const baseUrl = "https://vue-portfolio-taupe.vercel.app"
 
-export default async function handler(request: Request) {
+export default async function handler(request: Request, context:RequestContext) {
     if(request.method ==="GET"){
         if(request.url ===baseUrl+"/Icons/discord.png"){
             const imageData = await fetch(new URL('./Icons/discord.png', import.meta.url)).then(
