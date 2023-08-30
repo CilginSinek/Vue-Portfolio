@@ -28,7 +28,8 @@ onMounted(async () => {
 
 <template>
     <div class="card">
-        <div class="contactDiv">
+        <h3 v-if="contactArr.length === 0">Loading...</h3>
+        <div v-else class="contactDiv">
             <div class="contactCard" v-for="contact in contactArr">
                 <a :href="contact.link">
                     <img class="contactImage" :src="contact.imageUrl" :alt="contact.name" />

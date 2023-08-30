@@ -66,7 +66,7 @@ nav{
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 30px;
+  padding: 30px 30px 30px 20px;
   gap: 5px;
 }
 .contactImage{
@@ -115,5 +115,33 @@ nav{
 .reposDiv{
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap:30px
+  gap:30px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.aboutText{
+  padding: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .navbarLinks{
+    font-size: x-large;
+    gap: 25px;
+    padding: 30px 30px 10px 30px;
+  }
+  .contactCard{
+    padding: 5px;
+    gap: 0px;
+  }
+  #app{
+    gap:225px;
+  }
+  .reposDiv{
+    grid-template-columns: repeat(1,1fr);
+    gap:10px;
+  }
+  .card{
+    padding: 0px;
+  }
 }

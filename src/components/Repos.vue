@@ -19,7 +19,8 @@ onMounted(async () => {
 
 <template>
     <div class="card">
-        <div class="reposDiv" >
+        <h3 v-if="repos.length === 0">Loading...</h3>
+        <div v-else class="reposDiv" >
             <div v-for="repon in repos" :key="repon.repo">
                 <Repo :owner="repon.owner" :repo="repon.repo" :link="repon.link" :image="repon.image" :language="repon.language"
                     :languageColor="repon.languageColor" :stars="repon.stars" :forks="repon.forks" />

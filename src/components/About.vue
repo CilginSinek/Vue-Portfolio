@@ -17,6 +17,6 @@ onMounted(async () => {
 
 <template>
     <div class="card">
-        <VueMarkdown :source="about ? about : '#Loading...'" />
+        <VueMarkdown class="aboutText" :source="about ? about : '# Loading...'" />
     </div>
 </template>
