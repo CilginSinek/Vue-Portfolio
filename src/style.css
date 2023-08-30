@@ -76,11 +76,17 @@ nav{
 .repo{
   display: flex;
   flex-direction: column;
+  background-color: #333;
 }
 .repoFooter{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
   gap: 5px;
+}
+.repoFooter > p {
+  color: #7A7A7C;
 }
 .repoColor{
   width: 20px;
@@ -88,7 +94,10 @@ nav{
   border-radius: 50%;
 }
 .contactDiv{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
   justify-content:center;
+}
+.reposDiv{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:30px
 }
