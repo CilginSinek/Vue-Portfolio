@@ -102,7 +102,7 @@ nav{
   flex-direction: column;
   background-color: #333;
   width: 220px;
-  height: 90px;
+  min-height: 90px;
   justify-content: space-between;
   padding: 15px 40px 0px 20px;
   flex-wrap: nowrap;
@@ -150,17 +150,24 @@ nav{
   padding: 20px;
 }
 @media only screen and (max-width: 600px) {
+  .nav{
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+    align-items: center;
+  }
   .navbarLinks{
     font-size: x-large;
-    gap: 25px;
-    padding: 30px 30px 10px 30px;
+    gap: 10px;
+    padding: 30px 30px 10px;
   }
   .contactCard{
     padding: 5px;
     gap: 0px;
   }
   #app{
-    gap:200px;
+    gap:130px;
   }
   .reposDiv{
     grid-template-columns: repeat(1,1fr);
@@ -172,6 +179,10 @@ nav{
   .reposCard{
     padding: 0px 20px;
     height: 500px;
+  }
+  .contactDiv{
+    justify-content: center;
+    justify-items: center;
   }
 }
 
