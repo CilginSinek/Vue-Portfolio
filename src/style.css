@@ -47,7 +47,7 @@ nav{
   min-height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 
   max-width: 600px;
   height: 300px;
@@ -77,13 +77,18 @@ nav{
   display: flex;
   flex-direction: column;
   background-color: #333;
+  width: 200px;
+  height: 90px;
+  justify-content: space-between;
+  padding: 15px 60px 0px 20px;
+  flex-wrap: nowrap;
 }
 .repoFooter{
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 5px;
+  gap: 10px;
 }
 .repoFooter > p {
   color: #7A7A7C;
@@ -92,6 +97,14 @@ nav{
   width: 20px;
   height: 20px;
   border-radius: 50%;
+}
+.repoLink{
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+}
+.repoLink:hover{
+  text-decoration: underline;
 }
 .contactDiv{
   justify-content:center;
