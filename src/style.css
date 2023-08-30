@@ -33,9 +33,27 @@ nav{
   gap: 50px;
 }
 .navlink{
+  position: relative;
   text-decoration-line: none;
   color: white;
 }
+.navlink:after{
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 0px;
+  transition: 0.3s;
+}
+.navlink:hover:after{
+  width: 100%;
+}
+.router-link-active:after{
+  width: 100%;
+}
+
 .container{
   display: flex;
   justify-content: center;
@@ -48,6 +66,7 @@ nav{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 
   max-width: 600px;
   height: 300px;
@@ -59,6 +78,11 @@ nav{
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
 
   backdrop-filter: blur(15px);
+
+  animation-name: carAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards
 }
 .contactCard{
   display: flex;
@@ -135,13 +159,22 @@ nav{
     gap: 0px;
   }
   #app{
-    gap:225px;
+    gap:200px;
   }
   .reposDiv{
     grid-template-columns: repeat(1,1fr);
     gap:10px;
   }
   .card{
-    padding: 0px;
+    padding: 10px;
   }
+  .reposCard{
+    padding: 0px 20px;
+    height: 500px;
+  }
+}
+
+@keyframes carAnimation {
+  0% {top:-100px}
+  100% {top:0px}
 }

@@ -18,7 +18,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div class="card">
+    <div class="card reposCard">
         <h3 v-if="repos.length === 0">Loading...</h3>
         <div v-else class="reposDiv" >
             <div v-for="repon in repos" :key="repon.repo">
