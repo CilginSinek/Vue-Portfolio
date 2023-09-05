@@ -12,7 +12,6 @@
     "@vercel/edge": "^1.0.1",
     "@vercel/edge-config": "^0.2.1",
     "@vercel/og": "^0.5.11",
-    "markdown-vue": "^1.0.2",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
