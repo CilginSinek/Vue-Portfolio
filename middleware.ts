@@ -4,7 +4,7 @@ import { get } from "@vercel/edge-config";
 
 export const config = { matcher: "/api/:path*", runtime: "edge" };
 
-const baseUrl = "https://www.sinek.dev/"
+const baseUrl = "https://www.sinek.dev"
 
 export default async function handler(request: Request, context: RequestContext) {
   if (request.method === "GET") {
