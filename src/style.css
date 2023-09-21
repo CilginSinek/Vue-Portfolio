@@ -150,6 +150,9 @@ nav{
   padding: 20px;
 }
 @media only screen and (max-width: 600px) {
+  .aboutCard{
+    height: 350px;
+  }
   .nav{
     justify-content: center;
     align-items: center;

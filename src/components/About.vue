@@ -15,7 +15,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div class="card">
+    <div class="card aboutCard">
         <div v-if="aboutArray.length" class="aboutText">
             <p v-for="about in aboutArray">
                 {{ about }}
