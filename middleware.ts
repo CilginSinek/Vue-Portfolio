@@ -30,13 +30,6 @@ export default async function handler(request: Request, context: RequestContext)
     }
   }
 }
-//* get repo data func
-const GetRepos = async (): Promise<Object[]> => {
-  const res = await fetch(
-    "https://gh-pinned-repos.egoist.dev/?username=CilginSinek"
-  ).then((response) => response.json());
-  return res;
-};
 //* get contact data fuc
 const getContacts = async (): Promise<Object> => {
   const contacts: Object[] = (await get("contact")) || [{}];
@@ -48,4 +41,11 @@ const getAbout = async (location: string): Promise<String> => {
     (await get(location === "TR" ? "hakkimda" : "aboutMe")) ||
     "Edge-configs connection has lost.";
   return About;
+};
+//* get repo data func
+const GetRepos = async (): Promise<Object[]> => {
+  const res = await fetch(
+    "https://gh-pinned-repos-tsj7ta5xfhep.deno.dev/?username=CilginSinek"
+  ).then((response) => response.json());
+  return res;
 };
