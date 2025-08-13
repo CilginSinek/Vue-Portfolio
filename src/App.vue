@@ -47,7 +47,7 @@ onMounted(() => {
       <!-- Footer -->
       <footer class="footer">
         <div class="footer-content">
-          <p>&copy; 2025 Portfolio. Modern web teknolojileri ile geliştirilmiştir.</p>
+          <p>&copy; 2025 İsmail Han. Modern web teknolojileri ile geliştirilmiştir.</p>
           <div class="footer-links">
             <span>Vue.js</span>
             <span>TypeScript</span>
