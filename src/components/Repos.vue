@@ -42,6 +42,7 @@ onMounted(async () => {
                     :stars="repo.stars" 
                     :forks="repo.forks"
                     :index="index"
+                    :description="repo.description"
                 />
             </div>
         </div>

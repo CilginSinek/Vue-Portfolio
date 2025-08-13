@@ -6,6 +6,7 @@ interface PinnedRepos {
     language:string,
     languageColor:string,
     stars:string,
-    forks:string
+    forks:string,
+    description:string
 }
 export type { PinnedRepos }

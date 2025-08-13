@@ -41,7 +41,7 @@ const props = defineProps<Props>()
         </div>
         
         <div class="repo-description">
-            <p>Bu projeyi {{ props.owner }} tarafından geliştirilmiştir.</p>
+            <p>{{ props.description }}</p>
         </div>
         
         <div class="repoFooter">
