@@ -37,7 +37,7 @@ onMounted(async () => {
                 <h3 class="skills-title">Teknolojiler</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
-                        <div class="skill-icon">�</div>
+                        <div class="skill-icon">🐍</div>
                         <span>Python</span>
                     </div>
                     <div class="skill-item">
@@ -49,7 +49,7 @@ onMounted(async () => {
                         <span>Electron</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon">�🚀</div>
+                        <div class="skill-icon">🚀</div>
                         <span>Express</span>
                     </div>
                     <div class="skill-item">
@@ -77,7 +77,7 @@ onMounted(async () => {
                         <span>PostgreSQL</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon">�</div>
+                        <div class="skill-icon">🐹</div>
                         <span>Golang</span>
                     </div>
                     <div class="skill-item">
