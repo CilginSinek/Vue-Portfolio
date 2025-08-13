@@ -37,28 +37,52 @@ onMounted(async () => {
                 <h3 class="skills-title">Teknolojiler</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
-                        <div class="skill-icon">🚀</div>
-                        <span>Vue.js</span>
+                        <div class="skill-icon">�</div>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">⚡</div>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">⚛️</div>
+                        <span>Electron</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">�🚀</div>
+                        <span>Express</span>
                     </div>
                     <div class="skill-item">
                         <div class="skill-icon">📘</div>
                         <span>TypeScript</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon">⚡</div>
-                        <span>Vite</span>
+                        <div class="skill-icon">⚛️</div>
+                        <span>React</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon">🎨</div>
-                        <span>CSS3</span>
+                        <div class="skill-icon">💚</div>
+                        <span>Vue.js</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon">🛠️</div>
-                        <span>JavaScript</span>
+                        <div class="skill-icon">🔤</div>
+                        <span>C</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon">📱</div>
-                        <span>Responsive Design</span>
+                        <div class="skill-icon">🍃</div>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🐘</div>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">�</div>
+                        <span>Golang</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🐧</div>
+                        <span>Linux</span>
                     </div>
                 </div>
             </div>
