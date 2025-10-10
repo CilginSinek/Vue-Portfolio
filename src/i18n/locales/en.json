@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Hello, I'm Ismail Han",
+    "subtitle": "Developer",
+    "description": "I develop creative solutions with modern web technologies. I create projects that prioritize user experience with Vue.js, TypeScript, and other modern tools.",
+    "aboutButton": "About Me",
+    "projectsButton": "My Projects"
+  },
+  "about": {
+    "title": "About Me",
+    "loading": "Loading...",
+    "skillsTitle": "Technologies",
+    "content": "Hello! I'm İsmail Han, a passionate software developer. I love creating user-friendly and performant applications with modern web technologies.\n\nI work with modern frameworks like Vue.js, React, and TypeScript. On the backend side, I develop APIs using Node.js, Express, Python, and Go.\n\nI have experience in database management with MongoDB and PostgreSQL. I enjoy working on Linux systems and following DevOps processes.\n\nI'm eager to learn new technologies and contribute to open-source projects."
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Open source projects I've developed and worked on",
+    "loading": "Loading projects...",
+    "public": "Public",
+    "owner": "developed by"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "You can use the following platforms to get in touch with me",
+    "loading": "Loading..."
+  },
+  "footer": {
+    "copyright": "Built with modern web technologies."
+  }
+}

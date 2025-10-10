@@ -29,13 +29,13 @@ onMounted(async () => {
 <template>
     <div class="card">
         <div class="card-header">
-            <h2 class="card-title">İletişim</h2>
-            <p class="card-subtitle">Benimle iletişime geçmek için aşağıdaki platformları kullanabilirsiniz</p>
+            <h2 class="card-title">{{ $t('contact.title') }}</h2>
+            <p class="card-subtitle">{{ $t('contact.subtitle') }}</p>
         </div>
         
         <div v-if="contactArr.length === 0" class="loading">
             <div class="loading-spinner"></div>
-            <p>Yükleniyor...</p>
+            <p>{{ $t('contact.loading') }}</p>
         </div>
         
         <div v-else class="contactDiv">

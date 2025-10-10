@@ -13,10 +13,11 @@
 - 📱 **Fully Responsive** - Tüm cihazlarda mükemmel görünüm
 - ⚡ **Blazing Fast** - Vite ile optimize edilmiş performans
 - 🔧 **TypeScript** - Type-safe kod geliştirme
-- 🌐 **Edge Middleware** - Vercel Edge Functions ile API desteği
+- 🌐 **i18n Support** - Türkçe ve İngilizce dil desteği
+- 🌍 **Auto Language Detection** - Tarayıcı diline göre otomatik dil seçimi
 - 🎭 **Smooth Animations** - CSS3 ve Vue transitions
 - 🔄 **Dynamic Content** - GitHub API entegrasyonu
-- 🌍 **Geo-based Responses** - Bölgeye göre dinamik içerik
+- ☁️ **Cloudflare Ready** - Cloudflare ile optimize edilmiş
 
 ## 🛠️ Teknoloji Stack
 
@@ -24,6 +25,7 @@
 - **Vue 3** - Progressive JavaScript framework
 - **TypeScript** - Static type checking
 - **Vue Router** - Official router for Vue.js
+- **Vue I18n** - Internationalization plugin
 - **CSS3** - Modern styling with custom properties
 
 ### Build Tools
@@ -32,6 +34,7 @@
 
 ### Deployment
 - **Vercel** - Serverless deployment platform
+- **Cloudflare** - CDN and edge network
 - **Edge Functions** - Serverless functions at the edge
 
 ## 📦 Kurulum
@@ -100,6 +103,11 @@ Vue-Portfolio/
 │   │   ├── Home.vue
 │   │   ├── Repo.vue
 │   │   └── Repos.vue
+│   ├── i18n/          # Internationalization
+│   │   ├── index.ts   # i18n configuration
+│   │   └── locales/   # Translation files
+│   │       ├── tr.json
+│   │       └── en.json
 │   ├── Router/         # Vue Router config
 │   ├── App.vue         # Main app component
 │   ├── main.ts         # App entry point
@@ -117,6 +125,15 @@ Vue-Portfolio/
 - **Smooth Transitions** - Yumuşak sayfa geçişleri
 - **Hover Animations** - Etkileşimli hover efektleri
 - **Loading States** - Profesyonel loading ekranları
+- **Language Switcher** - Kolay dil değiştirme
+
+## 🌍 Çok Dilli Destek
+
+Site şu dilleri destekler:
+- 🇹🇷 **Türkçe** (varsayılan)
+- 🇬🇧 **English**
+
+Dil otomatik olarak tarayıcı diline göre seçilir ve kullanıcı navbar'daki butonlarla istediği zaman değiştirebilir. Seçilen dil localStorage'a kaydedilir.
 
 ## 🔧 Özelleştirme
 
@@ -135,7 +152,11 @@ CSS custom properties ile kolayca özelleştirilebilir:
 
 ### İçerik Güncelleme
 - `src/components/` dizinindeki Vue componentleri düzenleyin
-- GitHub API entegrasyonu için kişisel access token ekleyin
+- `src/i18n/locales/` dizinindeki çeviri dosyalarını düzenleyin
+- Yeni dil eklemek için:
+  1. `src/i18n/locales/` içine yeni JSON dosyası ekleyin
+  2. `src/i18n/index.ts` dosyasında yeni dili import edin
+  3. Language switcher'a yeni butonu ekleyin
 
 ## 📱 Responsive Breakpoints
 

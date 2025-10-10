@@ -20,14 +20,14 @@ onMounted(async () => {
 <template>
     <div class="card">
         <div class="card-header">
-            <h2 class="card-title">Projelerim</h2>
-            <p class="card-subtitle">Geliştirdiğim ve üzerinde çalıştığım açık kaynak projeler</p>
+            <h2 class="card-title">{{ $t('projects.title') }}</h2>
+            <p class="card-subtitle">{{ $t('projects.subtitle') }}</p>
             <div class="title-decoration"></div>
         </div>
         
         <div v-if="repos.length === 0" class="loading">
             <div class="loading-spinner"></div>
-            <p>Projeler yükleniyor...</p>
+            <p>{{ $t('projects.loading') }}</p>
         </div>
         
         <div v-else class="reposDiv">

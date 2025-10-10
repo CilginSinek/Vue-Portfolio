@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n'
 
-const aboutArray = ref<string[]>([]);
-onMounted(async () => {
-    await fetch(`/api/about`,{
-        method:"GET",
-        mode:"same-origin",
-        credentials: "same-origin"
-    }).then(response => response.json()).then(res => {
-        aboutArray.value = res.split("\n");
-    }).catch(err => aboutArray.value = [err.message])
+const { t } = useI18n()
+
+const aboutArray = computed(() => {
+    return t('about.content').split('\n').filter(line => line.trim())
 })
 
 </script>
@@ -17,16 +13,11 @@ onMounted(async () => {
 <template>
     <div class="card">
         <div class="card-header">
-            <h2 class="card-title">Hakkımda</h2>
+            <h2 class="card-title">{{ $t('about.title') }}</h2>
             <div class="title-decoration"></div>
         </div>
         
-        <div v-if="aboutArray.length === 0" class="loading">
-            <div class="loading-spinner"></div>
-            <p>Yükleniyor...</p>
-        </div>
-        
-        <div v-else class="aboutContent">
+        <div class="aboutContent">
             <div class="aboutText">
                 <p v-for="(about, index) in aboutArray" :key="index" class="about-paragraph">
                     {{ about }}
@@ -34,7 +25,7 @@ onMounted(async () => {
             </div>
             
             <div class="skills-section">
-                <h3 class="skills-title">Teknolojiler</h3>
+                <h3 class="skills-title">{{ $t('about.skillsTitle') }}</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-icon">🐍</div>

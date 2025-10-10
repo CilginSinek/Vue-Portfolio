@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Anasayfa",
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "home": {
+    "title": "Merhaba, Ben Ismail Han",
+    "subtitle": "Developer",
+    "description": "Modern web teknolojileri ile yaratıcı çözümler geliştiriyorum. Vue.js, TypeScript ve diğer modern araçlarla kullanıcı deneyimini ön planda tutan projeler yapıyorum.",
+    "aboutButton": "Hakkımda",
+    "projectsButton": "Projelerim"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "loading": "Yükleniyor...",
+    "skillsTitle": "Teknolojiler",
+    "content": "Merhaba! Ben İsmail Han, tutkulu bir yazılım geliştiricisiyim. Modern web teknolojileri ile kullanıcı dostu ve performanslı uygulamalar geliştirmeyi seviyorum.\n\nVue.js, React ve TypeScript gibi modern frameworkler ile çalışıyorum. Backend tarafında Node.js, Express, Python ve Go kullanarak API'ler geliştiriyorum.\n\nVeritabanı yönetimi konusunda MongoDB ve PostgreSQL deneyimim var. Linux sistemleri üzerinde çalışmayı ve DevOps süreçlerini takip etmeyi seviyorum.\n\nYeni teknolojileri öğrenmeye ve açık kaynak projelere katkıda bulunmaya hevesliyim."
+  },
+  "projects": {
+    "title": "Projelerim",
+    "subtitle": "Geliştirdiğim ve üzerinde çalıştığım açık kaynak projeler",
+    "loading": "Projeler yükleniyor...",
+    "public": "Public",
+    "owner": "tarafından geliştirilmiştir"
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Benimle iletişime geçmek için aşağıdaki platformları kullanabilirsiniz",
+    "loading": "Yükleniyor..."
+  },
+  "footer": {
+    "copyright": "Modern web teknolojileri ile geliştirilmiştir."
+  }
+}

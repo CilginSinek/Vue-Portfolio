@@ -15,19 +15,18 @@ onMounted(() => {
     <div class="hero-section" :class="{ 'visible': isVisible }">
       <div class="hero-content">
         <h1 class="hero-title">
-          Merhaba, Ben 
-          <span class="gradient-text">İsmail</span>
+          {{ $t('home.title') }} 
+          <span class="gradient-text">{{ $t('home.subtitle') }}</span>
         </h1>
         <p class="hero-description">
-          Modern web teknolojileri ile yaratıcı çözümler geliştiriyorum. 
-          Vue.js, TypeScript ve diğer modern araçlarla kullanıcı deneyimini ön planda tutan projeler yapıyorum.
+          {{ $t('home.description') }}
         </p>
         <div class="hero-buttons">
           <router-link to="/about" class="btn btn-primary">
-            Hakkımda
+            {{ $t('home.aboutButton') }}
           </router-link>
           <router-link to="/repos" class="btn btn-secondary">
-            Projelerim
+            {{ $t('home.projectsButton') }}
           </router-link>
         </div>
       </div>

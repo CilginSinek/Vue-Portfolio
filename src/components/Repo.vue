@@ -41,7 +41,7 @@ const props = defineProps<Props>()
         </div>
         
         <div class="repo-description">
-            <p>{{ props.description }}</p>
+            <p>{{ props.description || `${$t('projects.owner')} ${props.owner}` }}</p>
         </div>
         
         <div class="repoFooter">
@@ -50,7 +50,7 @@ const props = defineProps<Props>()
                 <span class="language-name">{{ props.language }}</span>
             </div>
             <div class="repo-type">
-                <span>Public</span>
+                <span>{{ $t('projects.public') }}</span>
             </div>
         </div>
     </div>
